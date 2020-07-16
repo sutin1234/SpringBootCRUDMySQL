@@ -3,9 +3,6 @@ package com.example.crud.controller;
 import java.util.List;
 import java.util.Optional;
 
-import javax.servlet.http.HttpServletResponse;
-import javax.ws.rs.core.Response;
-
 import com.example.crud.model.Product;
 import com.example.crud.services.ServiceProduct;
 
@@ -32,7 +29,7 @@ public class ProductController {
     }
 
     @GetMapping("/product/{id}")
-    public Product getMethodName(@PathVariable("id") Integer id) {
+    public Optional<Product> getMethodName(@PathVariable("id") Integer id) {
         return serviceProduct.getProduct(id);
     }
 

@@ -1,7 +1,36 @@
 # SpringBootCRUDMySQL
+build CRUD springboot with JPA Mysql
 
-build CRUDspringboot with JPA
+### run project
+```
+$ mvn spring-boot:run
+```
 
-## Run project
+### clean | Install dependencies pom.ml
+```bash 
+$ mvn clean install
+```
 
-mvn spring-boot:run
+### build .jar file
+```bash 
+$ mvn clean package
+```
+
+### serve docker and with logs
+```bash
+$ docker-compose up --build
+```
+
+### serve docker without logs
+```bash
+$ docker-compose up --build -d
+```
+### serve spring-boot project
+```bash 
+# springboot project
+http://localhost:8888 
+
+# serve phpmyadmin
+http://localhost:8000
+
+```

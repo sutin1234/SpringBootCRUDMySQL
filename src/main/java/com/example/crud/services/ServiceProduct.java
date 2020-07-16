@@ -1,10 +1,11 @@
 package com.example.crud.services;
 
 import com.example.crud.model.Product;
+import com.example.crud.repository.ProductRepository;
+
 import java.util.List;
 import java.util.Optional;
 
-import com.example.crud.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,11 +16,11 @@ public class ServiceProduct {
     ProductRepository productRepository;
 
     public List<Product> getProducts() {
-        return productRepository.findAll();
+        return (List<Product>) productRepository.findAll();
     }
 
-    public Product getProduct(final Integer id) {
-        return productRepository.getOne(id);
+    public Optional<Product> getProduct(Integer id) {
+        return productRepository.findById(id);
     }
 
     public Product addProduct(final Product product) {
