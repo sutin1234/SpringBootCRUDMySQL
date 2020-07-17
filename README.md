@@ -25,6 +25,11 @@ $ docker-compose up --build
 ```bash
 $ docker-compose up --build -d
 ```
+### deploy with shell script
+```bash
+$ ./start.sh # using for gitbash, terminal
+```
+
 ### serve spring-boot project
 ```bash 
 # springboot project
